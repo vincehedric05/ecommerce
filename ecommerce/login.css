@@ -1,0 +1,83 @@
+/* login.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111827; /* same dark background */
+  color: #f3f4f6; /* light text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f9fafb;
+}
+
+form {
+  background: #1f2937; /* dark card */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #374151;
+  color: #f3f4f6;
+  font-size: 1rem;
+}
+
+form input:focus {
+  outline: 2px solid #2563eb; /* blue accent */
+  background: #4b5563;
+}
+
+button {
+  background: #2563eb; /* blue accent */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+  color: #d1d5db;
+}
+
+.account-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.account-link a {
+  color: #2563eb; /* same blue as buttons */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.account-link a:hover {
+  text-decoration: underline;
+}

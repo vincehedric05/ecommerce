@@ -4,10 +4,7 @@
 <html>
 <head>
   <title>Admin Panel - Manage Products</title>
-  <style>
-    img { vertical-align: middle; }
-    form.inline { display: inline; margin-left: 10px; }
-  </style>
+  <link rel="stylesheet" href="admin.css">
 </head>
 <body>
   <h1>Admin Panel</h1>

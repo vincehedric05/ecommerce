@@ -1,49 +1,67 @@
-/* style.css */
+/* style.css (match product.css theme) */
 body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111827; /* dark background */
+  color: #f3f4f6;
 }
 
+/* 🔹 Page title */
 h1 {
   text-align: center;
-  color: #333;
+  color: #f9fafb;
+  margin: 30px 0 20px;
 }
 
+/* 🔹 Product grid */
 .products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
+/* 🔹 Product card */
 .product {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  width: 200px;
-  background: #fff;
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* 🔹 Product image */
 .product img {
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
+/* 🔹 Button styling */
 button {
-  background: #007bff;
+  background: #2563eb;
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 16px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-  background: #0056b3;
+  background: #1e40af;
+  transform: scale(1.05);
 }

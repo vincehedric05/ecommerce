@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 <header>
   <div class="logo">
     <h2><a href="index.php">SEEORA</a></h2>

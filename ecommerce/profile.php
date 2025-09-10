@@ -27,7 +27,6 @@ if (isset($_POST['save_address'])) {
     $postal_code = $_POST['postal_code'];
 
     if ($address) {
-        // Update existing
         $stmt = $conn->prepare("UPDATE address 
             SET house_no=?, street=?, town=?, municipality=?, province=?, country=?, postal_code=? 
             WHERE user_id=?");
@@ -35,7 +34,6 @@ if (isset($_POST['save_address'])) {
         $stmt->execute();
         $_SESSION['message'] = "Address updated successfully!";
     } else {
-        // Insert new
         $stmt = $conn->prepare("INSERT INTO address 
             (user_id, house_no, street, town, municipality, province, country, postal_code) 
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
@@ -52,22 +50,19 @@ if (isset($_POST['save_address'])) {
 <html>
 <head>
   <title>Profile - Manage Address</title>
-  <style>
-    form { max-width: 400px; margin: 20px auto; display: flex; flex-direction: column; gap: 10px; }
-    input { padding: 8px; }
-    button { padding: 10px; background: #333; color: white; border: none; cursor: pointer; }
-    button:hover { background: #555; }
-    .container { width: 80%; margin: auto; }
-  </style>
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="header.css">
 </head>
 <body>
+  <?php include 'header.php'; ?> <!-- ✅ header added -->
+
   <div class="container">
     <h1>Your Profile</h1>
     <h2>Manage Address</h2>
 
     <?php 
     if (isset($_SESSION['message'])) {
-        echo "<p style='color:green;'>".$_SESSION['message']."</p>";
+        echo "<p style='color:lightgreen;'>".$_SESSION['message']."</p>";
         unset($_SESSION['message']);
     }
     ?>

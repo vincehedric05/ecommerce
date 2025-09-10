@@ -1,13 +1,13 @@
-/* header.css */
+/* 🔹 Global Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: #121212; /* dark modern */
+  padding: 15px 30px;          /* ✅ consistent padding */
+  background: #121212;         /* dark modern */
   color: white;
   box-shadow: 0 2px 8px rgba(0,0,0,0.6);
-  font-family: Arial, sans-serif;  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .logo h2 {
@@ -21,14 +21,18 @@ header {
   font-size: 1.5rem;
 }
 
+/* 🔹 Search Bar */
 .search-bar {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .search-bar input {
   padding: 8px 12px;
-  width: 60%;
+  flex: 0 1 60%;
   border-radius: 6px;
   border: none;
   background: #1e1e1e;
@@ -37,21 +41,26 @@ header {
 
 .search-bar button {
   padding: 8px 14px;
-  margin-left: 5px;
   background: #007bff;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s ease;
+  white-space: nowrap;
 }
 
 .search-bar button:hover {
   background: #0056b3;
 }
 
+/* 🔹 Nav Links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
 .nav-links a {
-  margin-left: 20px;
   color: white;
   text-decoration: none;
   font-weight: 500;
